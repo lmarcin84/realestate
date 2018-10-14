@@ -1,0 +1,9 @@
+{% if latest_properties %}
+    <ul>
+    {% for property in latest_properties %}
+        <li><a href="{% url 'arkadia:detail' property.id %}">{{ property.signature }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No properties are available</p>
+{% endif %}

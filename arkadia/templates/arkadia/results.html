@@ -1,0 +1,9 @@
+<h1> {{ property.signature }} </h1>
+
+<ul>
+{% for choice in property.choice_set.all %}
+    <li>{{ choice.description }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'arkadia:detail' property.id%}">Back</a>
